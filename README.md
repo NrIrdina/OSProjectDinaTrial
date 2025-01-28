@@ -105,15 +105,21 @@ codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin```
 
 3. Run the command **df** . ***(1 mark)*** 
-__Filesystem     1K-blocks     Used Available Use% Mounted on
+```
+@NrIrdina ➜ /workspaces/OSProjectDinaTrial (main) $ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
 overlay         32847680 10705800  20447780  35% /
 tmpfs              65536        0     65536   0% /dev
 shm                65536        8     65528   1% /dev/shm
 /dev/root       30298176 13191848  17089944  44% /vscode
 /dev/sdb1       46127956 18628620  25123760  43% /tmp
-/dev/loop4      32847680 10705800  20447780  35% /workspaces__.
+/dev/loop4      32847680 10705800  20447780  35% /workspaces
+```
 
-4. Run the command **du** . ***(1 mark)*** ~~~8       ./.git/refs/heads
+4. Run the command **du** . ***(1 mark)*** 
+```
+@NrIrdina ➜ /workspaces/OSProjectDinaTrial (main) $ du
+8       ./.git/refs/heads
 4       ./.git/refs/tags
 8       ./.git/refs/remotes/origin
 12      ./.git/refs/remotes
@@ -205,26 +211,33 @@ shm                65536        8     65528   1% /dev/shm
 32      ./.git/logs
 2684    ./.git
 1972    ./images
-4680    .~~~
+4680    .
+```
 
 5. Run the command **ls** . ***(1 mark)*** 
 __README.md  images__.
 
 6. Run the command **ls -asl** . ***(1 mark)*** 
-__total 40
+```
+total 40
  4 drwxrwxrwx+ 4 codespace root  4096 Jan 28 08:50 .
  4 drwxr-xrwx+ 5 codespace root  4096 Jan 28 08:50 ..
  4 drwxrwxrwx+ 9 codespace root  4096 Jan 28 08:56 .git
 24 -rw-rw-rw-  1 codespace root 21571 Jan 28 09:02 README.md
- 4 drwxrwxrwx+ 2 codespace root  4096 Jan 28 08:50 images__.
+ 4 drwxrwxrwx+ 2 codespace root  4096 Jan 28 08:50 images
+```
 
 7. Run the command **free -h** . ***(1 mark)*** 
-__              total        used        free      shared  buff/cache   available
+```
+@NrIrdina ➜ /workspaces/OSProjectDinaTrial (main) $ free -h
+              total        used        free      shared  buff/cache   available
 Mem:          7.7Gi       1.4Gi       465Mi        63Mi       5.9Gi       6.0Gi
-Swap:            0B          0B          0B__.
+Swap:            0B          0B          0B
+```
 
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** 
-__/workspaces/OSProjectDinaTrial (main) $ cat /proc/cpuinfo
+```
+@NrIrdina ➜ /workspaces/OSProjectDinaTrial (main) $ cat /proc/cpuinfo
 processor       : 0
 vendor_id       : AuthenticAMD
 cpu family      : 25
@@ -232,7 +245,7 @@ model           : 1
 model name      : AMD EPYC 7763 64-Core Processor
 stepping        : 1
 microcode       : 0xffffffff
-cpu MHz         : 3232.350
+cpu MHz         : 3218.713
 cache size      : 512 KB
 physical id     : 0
 siblings        : 2
@@ -260,7 +273,7 @@ model           : 1
 model name      : AMD EPYC 7763 64-Core Processor
 stepping        : 1
 microcode       : 0xffffffff
-cpu MHz         : 3234.756
+cpu MHz         : 3212.017
 cache size      : 512 KB
 physical id     : 0
 siblings        : 2
@@ -279,24 +292,28 @@ TLB size        : 2560 4K pages
 clflush size    : 64
 cache_alignment : 64
 address sizes   : 48 bits physical, 48 bits virtual
-power management:__.
-
+power management:
+```
 9. Run the command **top** and type **q** to quit. ***(1 mark)*** 
-__top - 09:05:35 up 17 min,  0 users,  load average: 0.13, 0.51, 0.82
-Tasks:  25 total,   1 running,  24 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  3.5 us,  3.5 sy,  0.0 ni, 93.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-MiB Mem :   7929.6 total,    455.4 free,   1435.0 used,   6039.1 buff/cache
-MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6116.2 avail Mem 
+```
+top - 09:25:45 up 37 min,  0 users,  load average: 0.15, 0.19, 0.34
+Tasks:  23 total,   2 running,  21 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.7 us,  2.8 sy,  0.0 ni, 95.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7929.6 total,    234.6 free,   1505.1 used,   6189.8 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6045.2 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                  
-   6266 codespa+  20   0   41.5g 329748  50304 S   1.0   4.1   0:17.80 node                                                                                     
-   2737 codespa+  20   0   11.1g  64512  43904 S   0.7   0.8   0:01.43 node                                                                                     
-   2112 codespa+  20   0   11.3g 112780  46592 S   0.3   1.4   0:06.67 node                                                                                     
-      1 codespa+  20   0    1136    128    128 S   0.0   0.0   0:00.04 docker-init  __.
+   6266 codespa+  20   0   41.5g 325380  50304 S   1.3   4.0   0:45.68 node                                                                                     
+   2112 codespa+  20   0   11.3g 114048  46592 S   0.3   1.4   0:08.53 node                                                                                     
+   2737 codespa+  20   0   11.1g  66724  43904 S   0.3   0.8   0:02.44 node                                                                                     
+  20265 codespa+  20   0       0      0      0 R   0.3   0.0   0:00.01 top     
+```
 
 10. Run the command **uname -a**. ***(1 mark)*** 
-__/workspaces/OSProjectDinaTrial (main) $ uname -a
-Linux codespaces-ea9b04 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux__.
+```
+@NrIrdina ➜ /workspaces/OSProjectDinaTrial (main) $ uname -a
+Linux codespaces-ea9b04 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
 
 11. What is the available free memory in the system. ***(1 mark)*** :  __465Mi__.
 
