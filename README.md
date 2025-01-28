@@ -113,8 +113,7 @@ shm                65536        8     65528   1% /dev/shm
 /dev/sdb1       46127956 18628620  25123760  43% /tmp
 /dev/loop4      32847680 10705800  20447780  35% /workspaces__.
 
-4. Run the command **du** . ***(1 mark)*** 
-__8       ./.git/refs/heads
+4. Run the command **du** . ***(1 mark)*** ~~~8       ./.git/refs/heads
 4       ./.git/refs/tags
 8       ./.git/refs/remotes/origin
 12      ./.git/refs/remotes
@@ -206,7 +205,7 @@ __8       ./.git/refs/heads
 32      ./.git/logs
 2684    ./.git
 1972    ./images
-4680    .__.
+4680    .~~~
 
 5. Run the command **ls** . ***(1 mark)*** 
 __README.md  images__.
